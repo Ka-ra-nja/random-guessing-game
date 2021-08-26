@@ -22,5 +22,21 @@ while turns > 0:
 
     # all characters from the input
     # word taking one at a time.
-    for char in word:        # comparing that character with # the character in guesses
+    for char in word:
+        if char in guesses:
+            print("char")
+
+        else:
+            print("_")
+        # incremented in failure
+        failed += 1
+
+    if failed == 0:
+    # win game if failure is 0
+
+    print("you win")
+    # print correct word
+    print("the word is: ", Word)
+    break
+
 

@@ -1,16 +1,26 @@
-# This is a sam ple Python script.
+import random
+# library to use
+name = input("What is your name? ")
+print("Good luck", name)
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+words = ['rainbow', 'computer', 'science', 'programming',
+         'python', 'mathematics', 'player', 'condition',
+         'reverse', 'water', 'board', 'geeks']
 
+#  function choose one random
+word = random.choice(words)
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+print("Guess the  characters")
 
+guesses = ''
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+turns =12
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+while turns > 0:
+    # counts the number of times a user fails
+    failed = 0
+
+    # all characters from the input
+    # word taking one at a time.
+    for char in word:        # comparing that character with # the character in guesses
+

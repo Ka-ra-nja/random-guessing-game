@@ -1,27 +1,27 @@
 import random
 
 # library that we use in order to choose
-# on random words from a list of words
 
 name = input("What is your name? ")
 # Here the user is asked to enter the name first
-
 print("Good Luck ! ", name)
 
-words = ['rainbow', 'computer', 'science', 'programming',
-         'python', 'mathematics', 'player', 'condition',
-         'reverse', 'water', 'board', 'geeks']
+words = []
+n = int(input("How many words do you want to work with?  "))
+# iterating till the range
+for i in range(0, n):
+   print("Enter word No-{}: ".format(i+1))
+   elm = str(input())
+   words.append(elm)  # adding the element
 
 # Function will choose one random
 # word from this list of words
 word = random.choice(words)
 
-print("Guess the characters")
+print("Guess the characters of one  the words you choose")
 
 guesses = ''
-
-# any number of turns can be used here
-turns = 12
+turns = int(n - 1)
 
 while turns > 0:
 
@@ -38,7 +38,7 @@ while turns > 0:
             print(char)
 
         else:
-            print("_")
+            print("")
 
             # for every failure 1 will be
             # incremented in failure
@@ -75,3 +75,6 @@ while turns > 0:
 
         if turns == 0:
             print("You Loose")
+
+
+
